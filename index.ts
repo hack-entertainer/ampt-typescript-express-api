@@ -32,6 +32,12 @@ api.get('/hiya', async (req, res) =>
     message: "Well, hiya!",
   }));
 
+  api.get('/biya', async (req, res) =>
+    res.status(200).send({
+      body: req.body,
+      message: "Well, biya!",
+    }));
+
 app.use("/api", api);
 
 http.node.use(app);
