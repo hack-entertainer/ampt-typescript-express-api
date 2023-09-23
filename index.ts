@@ -26,6 +26,12 @@ api.post("/submit", async (req, res) => {
   });
 });
 
+api.get('/hiya', async (req, res) =>
+  res.status(200).send({
+    body: req.body,
+    message: "Well, hiya!",
+  }));
+
 app.use("/api", api);
 
 http.node.use(app);
